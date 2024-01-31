@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en-ph">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="web template" />
+    <meta name="keywords" content="web, template" />
+
+    <title>@ViewBag.Title</title>
+
+    <link rel="icon" href="@Url.Content($"~/dist/img/logo.ico")" type="image/x-icon" />
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="@Url.Content($"~/dist/css/font.min.css")">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="@Url.Content($"~/plugins/fontawesome-free/css/all.min.css")">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="@Url.Content($"~/dist/css/adminlte.min.css")">
+</head>
+<body class="hold-transition login-page">
+    @RenderBody()
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="@Url.Content($"~/plugins/jquery/dist/jquery.min.js")"></script>
+    <!-- Bootstrap 4 -->
+    <script src="@Url.Content($"~/plugins/bootstrap/js/bootstrap.bundle.min.js")"></script>
+    <!-- AdminLTE App -->
+    <script src="@Url.Content($"~/dist/js/adminlte.js")"></script>
+
+    <script type="text/javascript">
+    // DOMContentLoaded function
+    document.addEventListener("DOMContentLoaded", () => {
+      var sign_in_failed = "@ViewData["SignInFailed"]";
+      if (sign_in_failed == '1') {
+        alert("Sign In Failed. Maybe an incorrect credential or account not found");
+      }
+    });
+    </script>
+
+    <noscript>We are facing Script issues. Kindly enable JavaScript</noscript>
+</body>
+</html>

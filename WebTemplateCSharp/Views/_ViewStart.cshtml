@@ -1,0 +1,17 @@
+﻿@{
+    @*var routeUrl = ViewContext.RouteData.Values["Page"].ToString();
+    var pages = new List<string> { "Login" };
+    if (pages.Any(routeUrl.Contains))
+    {
+        Layout = "_LayoutViewer";
+        ViewBag.Title = "Web Template C Sharp - Login";
+    }
+    else
+    {
+        Layout = "_LayoutViewer";
+        ViewBag.Title = "Web Template C Sharp - Viewer";
+    }*@
+
+    Layout = "_LayoutViewer";
+    ViewBag.Title = "Web Template C Sharp - Viewer";
+}
