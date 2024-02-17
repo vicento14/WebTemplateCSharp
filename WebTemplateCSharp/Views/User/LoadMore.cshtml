@@ -34,27 +34,26 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <div class="row mb-2">
-                            <div class="col-lg-2 col-sm-3">
-                                <span><b>Employee No:</b></span>
-                                <input type="text" id="employee_no_search" class="form-control" autocomplete="off" style="height:45px; border: 1px solid black; font-size: 25px;">
+                        <div class="row mb-4">
+                            <div class="col-sm-3">
+                                <label>Employee No:</label>
+                                <input type="text" id="employee_no_search" class="form-control" autocomplete="off">
                             </div>
-                            <div class="col-lg-2 col-sm-3">
-                                <span><b>Full Name:</b></span>
-                                <input type="text" id="full_name_search" class="form-control" autocomplete="off" style="height:45px; border: 1px solid black; font-size: 25px;">
+                            <div class="col-sm-3">
+                                <label>Full Name:</label>
+                                <input type="text" id="full_name_search" class="form-control" autocomplete="off">
                             </div>
-                            <div class="col-lg-2 col-sm-3">
-                                <span><b>User Type:</b></span>
-                                <select id="user_type_search" class="form-control" style="height:45px; border: 1px solid black; font-size: 15px;">
+                            <div class="col-sm-3">
+                                <label>User Type:</label>
+                                <select id="user_type_search" class="form-control">
                                     <option value="">Select User Type</option>
                                     <option value="admin">Admin</option>
                                     <option value="user">User</option>
                                 </select>
                             </div>
-                            <div class="col-lg-6 col-sm-3">
-                                <div class="float-right">
-                                    <button class="btn btn-primary" id="searchReqBtn" onclick="search_accounts(1)">Search <i class="fas fa-search"></i></button>
-                                </div>
+                            <div class="col-sm-3">
+                                <label>&nbsp;</label>
+                                <button class="btn btn-block btn-primary" id="searchReqBtn" onclick="search_accounts(1)"><i class="fas fa-search mr-2"></i>Search</button>
                             </div>
                         </div>
                         <div id="accounts_table_res" class="table-responsive" style="height: 300px; overflow: auto; display:inline-block;">
