@@ -13,6 +13,7 @@
     string nav_class2 = "";
     string nav_class3 = "";
     string nav_class4 = "";
+    string nav_class5 = "";
     string active = "active";
 }
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -49,8 +50,11 @@
                     case "/User/TableSwitching":
                         nav_class3 = active;
                         break;
-                    case "/User/KeyupSearch":
+                    case "/User/TSLM":
                         nav_class4 = active;
+                        break;
+                    case "/User/KeyupSearch":
+                        nav_class5 = active;
                         break;
                 }
                 <li class="nav-item">
@@ -78,7 +82,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="@Url.Action("KeyupSearch", "User")" class="nav-link @nav_class4">
+                    <a href="@Url.Action("TSLM", "User")" class="nav-link @nav_class4">
+                        <i class="nav-icon far fa-file-alt"></i>
+                        <p>
+                            Table Switch + Load More
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("KeyupSearch", "User")" class="nav-link @nav_class5">
                         <i class="nav-icon far fa-file-alt"></i>
                         <p>
                             Keyup Search
