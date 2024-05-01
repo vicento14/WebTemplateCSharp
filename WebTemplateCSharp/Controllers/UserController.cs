@@ -24,6 +24,11 @@ namespace WebTemplateCSharp.Controllers
             return View();
         }
 
+        public IActionResult TSLM()
+        {
+            return View();
+        }
+
         public IActionResult KeyupSearch()
         {
             return View();
