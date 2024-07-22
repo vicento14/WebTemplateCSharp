@@ -149,7 +149,10 @@ namespace WebTemplateCSharp.Controllers
                 user_account.IdNumber = updated_user_account.IdNumber;
                 user_account.FullName = updated_user_account.FullName;
                 user_account.Username = updated_user_account.Username;
-                user_account.Password = updated_user_account.Password;
+                if (!string.IsNullOrEmpty(updated_user_account.Password))
+                {
+                    user_account.Password = updated_user_account.Password;
+                }
                 user_account.Section = updated_user_account.Section;
                 user_account.Role = updated_user_account.Role;
                 return await _db.SaveChangesAsync();
@@ -182,7 +185,7 @@ namespace WebTemplateCSharp.Controllers
                 {
                     c++;
                     string row = "<tr style=\"cursor: pointer; \" class=\"modal-trigger\" data-toggle=\"modal\" data-target=\"#update_account\" onclick=\"";
-                    row += "get_accounts_details(&quot;" + user_account.Id.ToString() + "~!~" + user_account.IdNumber + "~!~" + user_account.Username + "~!~" + user_account.FullName + "~!~" + user_account.Password + "~!~" + user_account.Section + "~!~" + user_account.Role + "&quot;)";
+                    row += "get_accounts_details(&quot;" + user_account.Id.ToString() + "~!~" + user_account.IdNumber + "~!~" + user_account.Username + "~!~" + user_account.FullName + "~!~" + user_account.Section + "~!~" + user_account.Role + "&quot;)";
                     row += "\">";
 
                     row += "<td>" + c.ToString() + "</td>";
@@ -216,7 +219,7 @@ namespace WebTemplateCSharp.Controllers
                 {
                     c++;
                     string row = "<tr style=\"cursor: pointer; \" class=\"modal-trigger\" data-toggle=\"modal\" data-target=\"#update_account\" onclick=\"";
-                    row += "get_accounts_details(&quot;" + user_account.Id.ToString() + "~!~" + user_account.IdNumber + "~!~" + user_account.Username + "~!~" + user_account.FullName + "~!~" + user_account.Password + "~!~" + user_account.Section + "~!~" + user_account.Role + "&quot;)";
+                    row += "get_accounts_details(&quot;" + user_account.Id.ToString() + "~!~" + user_account.IdNumber + "~!~" + user_account.Username + "~!~" + user_account.FullName + "~!~" + user_account.Section + "~!~" + user_account.Role + "&quot;)";
                     row += "\">";
 
                     row += "<td>" + c.ToString() + "</td>";
@@ -251,7 +254,7 @@ namespace WebTemplateCSharp.Controllers
                 {
                     c++;
                     string row = "<tr style=\"cursor: pointer; \" class=\"modal-trigger\" data-toggle=\"modal\" data-target=\"#update_account\" onclick=\"";
-                    row += "get_accounts_details(&quot;" + user_account.Id.ToString() + "~!~" + user_account.IdNumber + "~!~" + user_account.Username + "~!~" + user_account.FullName + "~!~" + user_account.Password + "~!~" + user_account.Section + "~!~" + user_account.Role + "&quot;)";
+                    row += "get_accounts_details(&quot;" + user_account.Id.ToString() + "~!~" + user_account.IdNumber + "~!~" + user_account.Username + "~!~" + user_account.FullName + "~!~" + user_account.Section + "~!~" + user_account.Role + "&quot;)";
                     row += "\">";
 
                     row += "<td>" + c.ToString() + "</td>";

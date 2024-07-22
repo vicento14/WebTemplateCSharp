@@ -17,5 +17,10 @@ namespace WebTemplateCSharp.Controllers
         {
             return View();
         }
+        public IActionResult Sample1()
+        {
+            return View();
+        }
+
     }
 }

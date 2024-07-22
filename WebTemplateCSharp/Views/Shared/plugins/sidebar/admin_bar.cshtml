@@ -11,6 +11,7 @@
 
     string nav_class1 = "";
     string nav_class2 = "";
+    string nav_class3 = "";
     string active = "active";
 }
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -44,6 +45,9 @@
                     case "/Admin/Accounts":
                         nav_class2 = active;
                         break;
+                    case "/Admin/Sample1":
+                        nav_class3 = active;
+                        break;
                 }
                 <li class="nav-item">
                     <a href="@Url.Action("Dashboard", "Admin")" class="nav-link @nav_class1">
@@ -58,6 +62,14 @@
                         <i class="nav-icon fas fa-user-cog"></i>
                         <p>
                             Account Management
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Sample1", "Admin")" class="nav-link @nav_class3">
+                        <i class="nav-icon fas fa-user-cog"></i>
+                        <p>
+                            Sample 1
                         </p>
                     </a>
                 </li>

@@ -30,7 +30,6 @@ namespace WebTemplateCSharp.Entities
         [Display(Name = "Username")]
         public string Username { get; set; }
         [Column("password")]
-        [Required]
         [MaxLength(50)]
         [Display(Name = "Password")]
         public string Password { get; set; }
