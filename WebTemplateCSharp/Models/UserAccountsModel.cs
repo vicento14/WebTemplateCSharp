@@ -27,7 +27,6 @@ namespace WebTemplateCSharp.Models
         [MaxLength(50)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-        [Required]
         [MaxLength(50)]
         [Display(Name = "Section")]
         public string Section { get; set; }
